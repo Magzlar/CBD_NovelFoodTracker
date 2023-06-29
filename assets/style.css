@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("poppins/Poppins-Bold.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Black";
+    src: url("poppins/Poppins-Black.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Light";
+    src: url("poppins/Poppins-Light.otf");
+}
+
+.header {
+    background-color:whitesmoke;
+    border-top: whitesmoke;
+    margin-top: 0px;
+    padding-top:0px;
+}
+
+.header-title {
+    color: whitesmoke;
+    font-size: 48px;
+    font-weight:lighter;
+    text-align: center;
+    max-width: 1600px;
+    background-color: #000000;
+    font-family:Poppins-Bold;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.header-description {
+    color: #020202;
+    margin: 3%;
+    text-align: left;
+    max-width: 1300px;
+    background-color: whitesmoke;
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 0%;
+    padding: 5px;
+    border-radius: 2px;
+    font-family:Poppins-Light;
+
+}
+
+.header-description2 {
+    color: #020202;
+    margin: 3%;
+    text-align: left;
+    max-width: 1200px;
+    background-color: whitesmoke;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 2%;
+    text-decoration: underline;
+    font-family:Poppins-Light;
+
+}
+
+
+  .header-description3 {
+    color: #020202;
+    text-align: left;
+    max-width: 1200px;
+    background-color: whitesmoke;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 0%;
+    text-indent: 7%;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    border-bottom-right-radius: 50px 20px;
+    box-shadow: 5px 10px #888888;
+    font-family:Poppins-Light;
+}
+
+.header-description4 {
+    color: #fff7f7;
+    text-align: center;
+    max-width: 1500px;
+    background-color: rgb(0, 0, 0);
+    font-size: 18px;
+    line-height: 1;;
+    margin-bottom: 5%;
+    padding: 1%;
+    font-family:Poppins-Light;
+
+}
+.header-description5{
+    color: #020202;
+    margin: 0%;
+    text-align: left;
+    max-width: 1350px;
+    background-color: whitesmoke;
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 2%;
+    padding: 5px;
+    border-radius: 2px;
+    font-family:Poppins-Light;
+    border-bottom: 10px solid lightsteelblue
+
+}
+
+.graph-background {
+    background-color: whitesmoke;
+}
+
+.two-graphs {display: inline-flex;
+    flex-direction: "row";
+    margin-right: 0%;
+    margin-bottom: 4%;
+    background-color: whitesmoke;
+    align-self: flex-end;
+    border-bottom: 10px solid lightsteelblue;
+    max-width: 1350px;
+}
