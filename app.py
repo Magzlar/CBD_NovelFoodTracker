@@ -127,6 +127,7 @@ bar_chart4 = make_bar_chart(x = list(map(str,df["ExtractedValue"].value_counts(s
                             )
 
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div(
     children=[html.H1(
