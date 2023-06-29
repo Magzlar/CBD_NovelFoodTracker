@@ -214,7 +214,7 @@ def update_bar_chart(manufacturer):
     fig.update_layout(
         plot_bgcolor="whitesmoke",  # Set the plot background color
         paper_bgcolor="whitesmoke",
-        legend=dict(y=1.0,x=-0.25,font=dict(size=16)),
+        legend=dict(y=1.0,x=0.12,font=dict(size=22)),
         font_family="Poppins-Light",
         )
     
