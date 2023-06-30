@@ -84,7 +84,7 @@ grouped_df2 = filtered_df2.groupby('lastUpdated').size()
 
 line_chart1 = make_line_graph(x=grouped_df2.index,
                                 y=grouped_df2.values,
-                                title=f"At the current rate of validating or removing applications <br> all applications will be processed by <b>{predicted_finish_date.date().strftime('%d/%m/%y')}</b>",
+                                title=f"At the current rate of validating or removing applications all applications will be processed by <b>{predicted_finish_date.date().strftime('%d/%m/%y')}</b>",
                                 labels={"x": "date ", "y": "Processed applications "},
                                 )
 
