@@ -178,16 +178,13 @@ app.layout = html.Div(
         ),
         dcc.Dropdown(id="manufacturer-dropdown",
                         options=[{"label": supplier, "value": supplier} for supplier in df["manufacturerSupplier"].unique()],
-                        placeholder=f"All {len(df['manufacturerSupplier'].unique())} companies",
+                        placeholder=f"{len(df['manufacturerSupplier'].unique())} companies, {len(df)} applications",
                         style={"width": "65.80%", "background-color": "whitesmoke"},
                         value=None),
 
-        html.Div(
-            children=[
-                dcc.Graph(id='status-bar-chart', style={"width": "90%", "margin-bottom": "0%"}),
-                dcc.Graph(id="Graph2", figure=line_chart1,style={"width":"100%"}),
-                ],className = "two-graphs"),
-
+    
+        dcc.Graph(id='status-bar-chart', style={"border-bottom": "10px solid lightsteelblue","max-width":"1350px"}),
+        dcc.Graph(id="Graph2", figure=line_chart1,style={"border-bottom": "10px solid lightsteelblue","max-width":"1350px"}),
         dcc.Graph(id="graph4", figure= bar_chart1, style={"border-bottom": "10px solid lightsteelblue","max-width":"1350px"}),
         dcc.Graph(id="graph5", figure=bar_chart2, style={"border-bottom": "10px solid lightsteelblue","max-width":"1350px"}),
         dcc.Graph(id="graph6", figure=bar_chart3, style={"border-bottom": "10px solid lightsteelblue","max-width":"1350px"}),  # Graph 5 | Types of CBD products
