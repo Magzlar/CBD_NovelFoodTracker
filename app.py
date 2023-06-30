@@ -126,7 +126,7 @@ bar_chart4 = make_bar_chart(x = list(map(str,df["ExtractedValue"].value_counts(s
                             labels={"x": "Amount (mg) ", "y": "Number of products "}
                             )
 
-app = Dash(__name__)
+app = Dash(__name__,meta_tags=[{"name":"viewport","content":"width=device-width,initial-scale=1.0,maximum-scale=1.2,minimum-scale=0.5"}])
 server = app.server
 
 app.layout = html.Div(
