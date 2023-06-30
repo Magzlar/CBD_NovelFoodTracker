@@ -199,23 +199,33 @@ def update_bar_chart(manufacturer):
     if manufacturer is not None:
         filtered_df = df[df['manufacturerSupplier'] == manufacturer]
         counts = filtered_df['status'].value_counts()
-    else:
-        counts = df['status'].value_counts()
-
-    fig = px.pie(names = counts.index, 
+        fig = px.pie(data_frame=counts,names = counts.index, 
                  values = counts.values,
-                 color_discrete_sequence=["blue", "green", "#D62728"],
-                 labels={"status":"status"}
+                 color = counts.index,
+                 color_discrete_map={"Validated":"green","Awaiting evidence":"blue","Removed":"#D62728"}
                  )
     
-    fig.update_layout(
-        plot_bgcolor="whitesmoke",  # Set the plot background color
-        paper_bgcolor="whitesmoke",
-        legend=dict(y=1.0,x=0.12,font=dict(size=22)),
-        font_family="Poppins-Light",
-        )
+        fig.update_layout(plot_bgcolor="whitesmoke",  # Set the plot background color
+                        paper_bgcolor="whitesmoke",
+                        legend=dict(y=0.95,x=0.12,font=dict(size=22)),
+                        font_family="Poppins-Light",
+                        )
+        return fig
+    else:
+        counts = df['status'].value_counts()
+        fig = px.pie(data_frame=counts,names = counts.index, 
+                 values = counts.values,
+                 color = counts.index,
+                 color_discrete_map={"Validated":"green","Awaiting evidence":"blue","Removed":"#D62728"}
+                 )
+        
+        fig.update_layout(plot_bgcolor="whitesmoke",  # Set the plot background color
+                          paper_bgcolor="whitesmoke",
+                          legend=dict(y=0.95,x=0.12,font=dict(size=22)),
+                          font_family="Poppins-Light",
+                          )
     
-    return fig
+        return fig
 
 if __name__ == "__main__":
     app.run(debug=True)
