@@ -138,7 +138,7 @@ app.layout = html.Div(
                                 ),
 
             html.P(
-                children=["To ensure regulatory compliance in the UK's CBD market, the",
+                children=["To ensure regulatory compliance in the UK's CBD market the",
                                 html.A(" Food Standards Agency (FSA)",
                                     href="https://www.food.gov.uk/business-guidance/cbd-products-linked-to-novel-food-applications",
                                     target="_blank"
