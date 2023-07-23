@@ -151,7 +151,7 @@ app.layout = html.Div(
                 className="header-description2"
             ),
             
-            html.P(children = [html.Ol(children=[html.B("Real Time: "),"CBD NFA tracker checks for updates to the FSA database every 15 minutes"]),
+            html.P(children = [html.Ol(children=[html.B("Real Time: "),"CBD tracker checks for updates to the FSA database every 15 minutes"]),
                     html.Ol(children =[html.B("Comprehensive Overview:"), " Get a clear overview of the current status of all applications."]),
                     html.Ol(children = [html.B("Estimated Finish Date:"), " Get an estimate of when all applications are likely to be processed based on historical data."]),
                     html.Ol(children = [html.B("Company Search:")," Easily find the application status for any company that has applied for a CBD novel foods license."]),
