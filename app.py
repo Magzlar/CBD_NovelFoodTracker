@@ -233,9 +233,6 @@ def update_bar_chart(manufacturer):
         
 html.Div(
     [
-        # ... Your existing layout elements ...
-
-        # Google Analytics tracking code
         html.Script(
             '''
             <!-- Google tag (gtag.js) -->
