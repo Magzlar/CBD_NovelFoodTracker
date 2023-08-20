@@ -138,7 +138,7 @@ app.layout = html.Div(
                                 ),
 
             html.P(
-                children=["To ensure regulatory compliance in the UK's CBD market the",
+                children=["To ensure regulatory compliance in the UK's CBD market, the",
                                 html.A(" Food Standards Agency (FSA)",
                                     href="https://www.food.gov.uk/business-guidance/cbd-products-linked-to-novel-food-applications",
                                     target="_blank"
@@ -151,7 +151,7 @@ app.layout = html.Div(
                 className="header-description2"
             ),
             
-            html.P(children = [html.Ol(children=[html.B("Real Time: "),"CBD tracker checks for updates to the FSA database every 15 minutes"]),
+            html.P(children = [html.Ol(children=[html.B("Real Time: "),"CBD NFA tracker checks for updates to the FSA database every 15 minutes"]),
                     html.Ol(children =[html.B("Comprehensive Overview:"), " Get a clear overview of the current status of all applications."]),
                     html.Ol(children = [html.B("Estimated Finish Date:"), " Get an estimate of when all applications are likely to be processed based on historical data."]),
                     html.Ol(children = [html.B("Company Search:")," Easily find the application status for any company that has applied for a CBD novel foods license."]),
@@ -199,7 +199,8 @@ def update_bar_chart(manufacturer):
     if manufacturer is not None:
         filtered_df = df[df['manufacturerSupplier'] == manufacturer]
         counts = filtered_df['status'].value_counts()
-        fig = px.pie(data_frame=counts,names = counts.index, 
+        fig = px.pie(data_frame=counts,
+                 names = counts.index, 
                  values = counts.values,
                  color = counts.index,
                  color_discrete_map={"Validated":"green","Awaiting evidence":"blue","Removed":"#D62728"}
@@ -210,6 +211,7 @@ def update_bar_chart(manufacturer):
                         legend=dict(y=0.95,x=0.12,font=dict(size=22)),
                         font_family="Poppins-Light",
                         )
+        fig.update_traces(hovertemplate='Status: %{label}<br>Applications: %{value}')
         return fig
     else:
         counts = df['status'].value_counts()
@@ -224,6 +226,8 @@ def update_bar_chart(manufacturer):
                           legend=dict(y=0.95,x=0.12,font=dict(size=22)),
                           font_family="Poppins-Light",
                           )
+        
+        fig.update_traces(hovertemplate='Status: %{label}<br>Applications: %{value}')
     
         return fig
 
