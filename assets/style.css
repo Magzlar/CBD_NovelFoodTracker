@@ -25,7 +25,7 @@
     font-size: 48px;
     font-weight:lighter;
     text-align: center;
-    max-width: 1600px;
+    max-width: 1900px;
     background-color: #000000;
     font-family:Poppins-Bold;
     padding: 5px;
@@ -34,9 +34,9 @@
 
 .header-description {
     color: #020202;
-    margin: 3%;
+    margin: 2%;
     text-align: left;
-    max-width: 1300px;
+    max-width: 1500px;
     background-color: whitesmoke;
     font-size: 21px;
     line-height: 1.6;
@@ -70,7 +70,7 @@
     background-color: whitesmoke;
     font-size: 18px;
     line-height: 1.4;
-    margin-bottom: 0%;
+    margin-bottom: 5%;
     text-indent: 7%;
     border: 2px solid rgb(0, 0, 0);
     padding: 10px;
@@ -82,7 +82,7 @@
 .header-description4 {
     color: #fff7f7;
     text-align: center;
-    max-width: 1500px;
+    max-width: 1900px;
     background-color: rgb(0, 0, 0);
     font-size: 18px;
     line-height: 1;;
