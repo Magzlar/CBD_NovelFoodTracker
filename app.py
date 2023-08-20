@@ -235,15 +235,15 @@ html.Div(
     [
         html.Script(
             '''
-            <!-- Google tag (gtag.js) -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131426683-1"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1HM4XQ0KB"></script>
+                <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-              gtag('config', 'UA-131426683-1');
-            </script>
+                gtag('config', 'G-T1HM4XQ0KB');
+                </script>
             '''
         )
     ],
