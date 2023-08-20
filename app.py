@@ -4,7 +4,7 @@ import pandas as pd
 import re
 import plotly.graph_objects as go
 import plotly.express as px
-from dash import Dash, html, dcc, callback, Output, Input
+from dash import Dash, html, dcc, Output, Input, callback
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -128,7 +128,6 @@ bar_chart4 = make_bar_chart(x = list(map(str,df["ExtractedValue"].value_counts(s
 
 app = Dash(__name__,meta_tags=[{"name":"viewport","content":"width=device-width,initial-scale=1.0,maximum-scale=1.2,minimum-scale=0.5"}],title="CBD Tracker")
 server = app.server
-
 app.layout = html.Div(
     children=[html.H1(
         children=["CBD Novel Food Applications Tracker ",
@@ -192,6 +191,7 @@ app.layout = html.Div(
     ],
     className="header")
 
+
 @app.callback(Output('status-bar-chart', 'figure'),
               [Input('manufacturer-dropdown', 'value')])
 
@@ -230,6 +230,28 @@ def update_bar_chart(manufacturer):
         fig.update_traces(hovertemplate='Status: %{label}<br>Applications: %{value}')
     
         return fig
+        
+html.Div(
+    [
+        # ... Your existing layout elements ...
+
+        # Google Analytics tracking code
+        html.Script(
+            '''
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131426683-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-131426683-1');
+            </script>
+            '''
+        )
+    ],
+    className="header"
+)
 
 if __name__ == "__main__":
     app.run(debug=True)
