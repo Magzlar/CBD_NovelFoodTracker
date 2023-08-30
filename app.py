@@ -208,7 +208,7 @@ def update_bar_chart(manufacturer):
     
         fig.update_layout(plot_bgcolor="whitesmoke",  # Set the plot background color
                         paper_bgcolor="whitesmoke",
-                        legend=dict(y=0.95,x=0.12,font=dict(size=22)),
+                        legend=dict(y=0.95,x=0.005,font=dict(size=22)),
                         font_family="Poppins-Light",
                         )
         fig.update_traces(hovertemplate='Status: %{label}<br>Applications: %{value}')
@@ -223,7 +223,7 @@ def update_bar_chart(manufacturer):
         
         fig.update_layout(plot_bgcolor="whitesmoke",  # Set the plot background color
                           paper_bgcolor="whitesmoke",
-                          legend=dict(y=0.95,x=0.12,font=dict(size=22)),
+                          legend=dict(y=0.95,x=0.005,font=dict(size=22)),
                           font_family="Poppins-Light",
                           )
         
