@@ -165,7 +165,7 @@ app.layout = html.Div(
                         href="https://data.food.gov.uk/cbd-products/products-list",
                         style={"color": "greenyellow"}
                         ),
-                        " last updated: ",
+                        "was last updated: ",
                 html.B(f"{df['lastUpdated'].max().date().strftime('%d/%m/%y')}",
                         style={"color": "greenyellow"}
                         ),
