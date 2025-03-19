@@ -91,7 +91,7 @@ line_chart1 = make_line_graph(x=grouped_df2.index,
 #### Graph 3 ####
 bar_chart1 = make_bar_chart(x=df["manufacturerSupplier"].value_counts().index[:10],
                             y=df["manufacturerSupplier"].value_counts().values[:10],
-                            title=f"<b>10</b> companies are responsible for <b>{sum(df['manufacturerSupplier'].value_counts().head(10))/len(df)*100:.1f}%</b> of all applications",
+                            title=f"<b>10</b> companies are responsible for <b>{sum(df['manufacturerSupplier'].value_counts().head(10))/len(filtered_df2)*100:.1f}%</b> of all applications",
                             labels={"x": "Company name ", "y": "Number of applciations "},
                             )
 
