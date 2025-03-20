@@ -91,7 +91,7 @@ line_chart1 = make_line_graph(x=grouped_df2.index,
 #### Graph 3 ####
 bar_chart1 = make_bar_chart(x=df["manufacturerSupplier"].value_counts().index[:10],
                             y=df["manufacturerSupplier"].value_counts().values[:10],
-                            title=f"<b>10</b> companies are responsible for <b>{sum(df['manufacturerSupplier'].value_counts().head(10))/len(filtered_df2)*100:.1f}%</b> of all applications",
+                            title=f"<b>10</b> companies are responsible for <b>{sum(df['manufacturerSupplier'].value_counts().head(10))/len(df)*100:.1f}%</b> of all applications",
                             labels={"x": "Company name ", "y": "Number of applciations "},
                             )
 
@@ -100,7 +100,7 @@ grouped_df = df.groupby("manufacturerSupplier")["status"].value_counts().unstack
 sorted_group_values = grouped_df.sort_values(by="Validated",ascending=False) # Sort by companies with most validated applications
 bar_chart2 = make_bar_chart(x=sorted_group_values.index[:10],
                             y=sorted_group_values["Validated"][:10],
-                            title=f'Of <b>{df["status"].value_counts()[1]}</b> validated applications, <b>10</b> companies hold <b>{sum(list(grouped_df.sort_values(by="Validated",ascending=False)["Validated"][:10]))/df["status"].value_counts()[1]*100:.1f}%</b>',
+                            title=f'Of <b>{df["status"].value_counts()["Validated"]}</b> validated applications, <b>10</b> companies hold <b>{sum(list(grouped_df.sort_values(by="Validated",ascending=False)["Validated"][:10]))/df["status"].value_counts()["Validated"]*100:.1f}%</b>',
                             labels={"x": "Company name ", "y": "Number of applications "},
                             )
 #### Graph 5 ####
